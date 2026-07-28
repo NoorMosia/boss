@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Reminisce | Bio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fbf6ed",
+            "surface-container": "#f1eae0",
+            "surface-card": "#ffffff",
+            "on-surface": "#1d1c15",
+            "on-surface-variant": "#5a5a52",
+            "primary": "#1c1b1b",
+            "accent-green": "#3b4836",
+            "outline-variant": "#e6e2d6",
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'body': ['Hanken Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fbf6ed !important;
+      color: #1d1c15 !important;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .bg-accent-green { background-color: #3b4836; }
+    .text-accent-green { color: #3b4836; }
+    .border-accent-green { border-color: #3b4836; }
+    .bg-surface-card { background-color: #ffffff; }
+    .bg-surface-container { background-color: #f1eae0; }
+    .border-outline-variant { border-color: #e6e2d6; }
+  </style>
+</head>
+<body class="selection:bg-accent-green/20 selection:text-primary">
+
+  <!-- Section 8: Bio & Press Highlights -->
+  <section id="bio" class="py-20 px-6 max-w-6xl mx-auto border-t border-outline-variant">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+      
+      <!-- Main Bio Text -->
+      <div class="md:col-span-7 space-y-6">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent-green block">
+          The Story
+        </span>
+        
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary leading-tight">
+          A Sound Built on Intention, Melody &amp; Penmanship.
+        </h2>
+
+        <div class="space-y-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          <p>
+            Boss Reminisce crafts music at the balance point between smooth melodic hooks and detailed, rhythm-driven lyrics. Driven by a deep appreciation for song structure, his work spans intimate vocal arrangements and sharp verse delivery.
+          </p>
+          <p>
+            Rather than sticking to a single box, every release explores emotion, storytelling, and sound design—delivering tracks that feel honest, atmospheric, and distinctly personal.
+          </p>
+        </div>
+
+        <!-- Musical Highlights / Stats Badges -->
+        <div class="pt-4 grid grid-cols-3 gap-4 border-t border-outline-variant">
+          <div>
+            <span class="font-display text-2xl font-bold text-primary block">Melodic</span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">R&amp;B Vocal Roots</span>
+          </div>
+          <div>
+            <span class="font-display text-2xl font-bold text-primary block">Lyrical</span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Sharp Cadence</span>
+          </div>
+          <div>
+            <span class="font-display text-2xl font-bold text-primary block">Acoustic</span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Live Arrangements</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Editorial / Press Quotes -->
+      <div class="md:col-span-5 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent-green block">
+          Editorial Vision
+        </span>
+
+        <div class="bg-surface-card border border-outline-variant p-6 rounded-sm space-y-3 shadow-sm">
+          <p class="font-display text-sm italic text-primary leading-relaxed">
+            "Music that moves seamlessly between effortless vocal hooks and thoughtful, story-driven writing."
+          </p>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">
+            — Artist Profile
+          </span>
+        </div>
+
+        <div class="bg-surface-card border border-outline-variant p-6 rounded-sm space-y-3 shadow-sm">
+          <p class="font-display text-sm italic text-primary leading-relaxed">
+            "A rare combination of melody and verse precision that keeps every track grounded."
+          </p>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">
+            — Listening Notes
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

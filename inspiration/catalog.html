@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Reminisce — Discography Deck</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fef9ed",
+            "surface-card": "#ffffff",
+            "on-surface": "#1d1c15",
+            "on-surface-variant": "#5a5a52",
+            "primary": "#1c1b1b",
+            "secondary": "#775a19",
+            "outline-variant": "#e6e2d6",
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'body': ['Hanken Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #fef9ed;
+      color: #1d1c15;
+      overflow-x: hidden;
+    }
+
+    /* 3D Perspective Container */
+    .deck-container {
+      perspective: 1200px;
+    }
+
+    .card-stack {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .album-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #e6e2d6;
+      box-shadow: 0 20px 40px -15px rgba(28, 27, 27, 0.15);
+      transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s ease, box-shadow 0.6s ease;
+      transform-origin: center bottom;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Stack Layering Positions */
+    .album-card[data-index="0"] {
+      transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+      opacity: 1;
+      z-index: 30;
+      pointer-events: auto;
+    }
+
+    .album-card[data-index="1"] {
+      transform: translate3d(0, 24px, -40px) scale(0.93) rotate(-2.5deg);
+      opacity: 0.85;
+      z-index: 20;
+    }
+
+    .album-card[data-index="2"] {
+      transform: translate3d(0, 48px, -80px) scale(0.86) rotate(2deg);
+      opacity: 0.6;
+      z-index: 10;
+    }
+
+    .album-card[data-index="3"] {
+      transform: translate3d(0, 68px, -120px) scale(0.8) rotate(-1deg);
+      opacity: 0.3;
+      z-index: 5;
+    }
+
+    /* Card swipe out animation */
+    .album-card.swiping-next {
+      transform: translate3d(120%, -30px, 50px) rotate(15deg) !important;
+      opacity: 0 !important;
+    }
+
+    .album-card.swiping-prev {
+      transform: translate3d(-120%, -30px, 50px) rotate(-15deg) !important;
+      opacity: 0 !important;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="font-body min-h-screen flex flex-col justify-between p-6 md:p-12">
+
+  <!-- Section Title -->
+  <header class="max-w-4xl mx-auto w-full text-center mb-8">
+    <span class="font-body text-xs font-bold uppercase tracking-[0.25em] text-secondary mb-2 block">
+      Interactive Discography
+    </span>
+    <h2 class="font-display text-3xl md:text-5xl font-bold text-primary">
+      The Music Archive
+    </h2>
+    <p class="font-body text-sm text-on-surface-variant mt-2 max-w-md mx-auto">
+      Flip through the deck to explore recent releases, production credits, and lyrics.
+    </p>
+  </header>
+
+  <!-- Card Deck Stage -->
+  <main class="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto">
+    
+    <!-- Left: 3D Stack -->
+    <div class="md:col-span-6 flex justify-center">
+      <div class="deck-container w-[280px] sm:w-[320px] h-[280px] sm:h-[320px] relative my-6">
+        <div class="card-stack" id="card-stack">
+          
+          <!-- Card 1 -->
+          <div class="album-card p-4 flex flex-col justify-between" data-index="0" data-title="Midnight Archive" data-style="Singing / R&B Hook" data-year="2026" data-prod="tszuk" data-art="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" data-lyrics="Late night quiet in the city room... crafting cadence out of shadows and the heavy gloom.">
+            <div class="relative w-full aspect-square rounded overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Midnight Archive" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
+                01 / Single
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="album-card p-4 flex flex-col justify-between" data-index="1" data-title="Echo Chamber" data-style="Hard Rap / Complex Pen" data-year="2025" data-prod="tszuk" data-art="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" data-lyrics="No hooks needed when the verse takes hold. Every story delivered, written clean and bold.">
+            <div class="relative w-full aspect-square rounded overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Echo Chamber" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
+                02 / Verse Focus
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="album-card p-4 flex flex-col justify-between" data-index="2" data-title="Port Elizabeth Sunsets" data-style="Soulful Vocal & Flow" data-year="2025" data-prod="Self & tszuk" data-art="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" data-lyrics="Golden light on coastal roads, carrying the memories and heavy loads.">
+            <div class="relative w-full aspect-square rounded overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Port Elizabeth Sunsets" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
+                03 / EP Track
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="album-card p-4 flex flex-col justify-between" data-index="3" data-title="Crown & Cadence" data-style="Melodic Rap / Anthem" data-year="2024" data-prod="tszuk" data-art="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80" data-lyrics="Stepping into the room with confidence. Boss Reminisce holding down the prominence.">
+            <div class="relative w-full aspect-square rounded overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80" alt="Crown & Cadence" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
+                04 / Collaboration
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Active Song Details & Controls -->
+    <div class="md:col-span-6 space-y-6 text-center md:text-left">
+      <div>
+        <div class="inline-flex items-center space-x-2 bg-surface-card border border-outline-variant px-3 py-1 rounded-full mb-3">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          <span id="active-style" class="text-xs font-bold uppercase tracking-widest text-secondary">
+            Singing / R&B Hook
+          </span>
+        </div>
+        <h3 id="active-title" class="font-display text-3xl sm:text-4xl font-bold text-primary leading-tight">
+          Midnight Archive
+        </h3>
+        <p class="font-body text-sm text-on-surface-variant font-semibold mt-1">
+          Boss Reminisce <span id="active-prod" class="text-xs font-normal text-outline">(prod. tszuk)</span>
+        </p>
+      </div>
+
+      <!-- Excerpt Lyric Preview -->
+      <div class="p-4 bg-surface-card border border-outline-variant rounded-sm text-xs italic leading-relaxed text-on-surface-variant">
+        "<span id="active-lyrics">Late night quiet in the city room... crafting cadence out of shadows and the heavy gloom.</span>"
+      </div>
+
+      <!-- Controls & Deck Navigation -->
+      <div class="flex items-center justify-center md:justify-start space-x-4 pt-2">
+        <button id="prev-btn" class="w-12 h-12 rounded-full border border-outline-variant bg-surface-card flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+
+        <button id="play-btn" class="px-6 py-3 bg-primary text-white rounded-full flex items-center space-x-2 hover:opacity-90 transition-all shadow-md">
+          <span class="material-symbols-outlined fill-icon text-lg">play_arrow</span>
+          <span class="font-body text-xs font-bold uppercase tracking-widest">Listen Track</span>
+        </button>
+
+        <button id="next-btn" class="w-12 h-12 rounded-full border border-outline-variant bg-surface-card flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+
+      <p class="text-[11px] text-outline text-center md:text-left tracking-wider uppercase font-bold">
+        Use arrows or click cards to shuffle deck
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer Indicator -->
+  <footer class="max-w-4xl mx-auto w-full text-center pt-8 border-t border-outline-variant/60">
+    <p class="text-xs text-on-surface-variant">
+      Boss Reminisce • Crafted in collaboration with <strong class="text-primary">tszuk</strong>
+    </p>
+  </footer>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+    const stack = document.getElementById('card-stack');
+    const cards = Array.from(stack.getElementsByClassName('album-card'));
+    
+    // UI detail targets
+    const activeTitle = document.getElementById('active-title');
+    const activeStyle = document.getElementById('active-style');
+    const activeProd = document.getElementById('active-prod');
+    const activeLyrics = document.getElementById('active-lyrics');
+
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+
+    let isAnimating = false;
+
+    // Update active details panel based on top card
+    function updateDetails(topCard) {
+      activeTitle.textContent = topCard.dataset.title;
+      activeStyle.textContent = topCard.dataset.style;
+      activeProd.textContent = `(prod. ${topCard.dataset.prod})`;
+      activeLyrics.textContent = topCard.dataset.lyrics;
+    }
+
+    // Refresh dataset indexes
+    function refreshIndexes() {
+      cards.forEach((card, index) => {
+        card.setAttribute('data-index', index);
+      });
+      updateDetails(cards[0]);
+    }
+
+    // Cycle Next (Top card goes to back)
+    function nextCard() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const topCard = cards[0];
+      topCard.classList.add('swiping-next');
+
+      setTimeout(() => {
+        topCard.classList.remove('swiping-next');
+        // Move top card to back of array
+        cards.push(cards.shift());
+        refreshIndexes();
+        isAnimating = false;
+      }, 400);
+    }
+
+    // Cycle Prev (Back card comes to front)
+    function prevCard() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const lastCard = cards.pop();
+      cards.unshift(lastCard);
+      lastCard.classList.add('swiping-prev');
+      
+      refreshIndexes();
+
+      setTimeout(() => {
+        lastCard.classList.remove('swiping-prev');
+        isAnimating = false;
+      }, 50);
+    }
+
+    // Event Listeners
+    nextBtn.addEventListener('click', nextCard);
+    prevBtn.addEventListener('click', prevCard);
+
+    // Click on top card or deck to cycle
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        if (card.getAttribute('data-index') === '0') {
+          nextCard();
+        }
+      });
+    });
+
+    // Keyboard support (Left/Right arrows)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextCard();
+      if (e.key === 'ArrowLeft') prevCard();
+    });
+
+    // Initialize
+    refreshIndexes();
+  </script>
+</body>
+</html>

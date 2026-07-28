@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Reminisce | Official Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fbf6ed",
+            "surface-container": "#f1eae0",
+            "surface-card": "#ffffff",
+            "on-surface": "#1d1c15",
+            "on-surface-variant": "#5a5a52",
+            "primary": "#1c1b1b",
+            "accent-green": "#3b4836",
+            "outline-variant": "#e6e2d6",
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'body': ['Hanken Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fbf6ed !important;
+      color: #1d1c15 !important;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .bg-accent-green { background-color: #3b4836; }
+    .text-accent-green { color: #3b4836; }
+    .border-outline-variant { border-color: #e6e2d6; }
+  </style>
+</head>
+<body class="selection:bg-accent-green/20 selection:text-primary">
+
+  <!-- Section 7: Creative Partnership (Genuine Liner Note Style) -->
+  <section id="brand" class="py-20 px-6 max-w-6xl mx-auto border-t border-outline-variant">
+    
+    <div class="bg-surface-card border border-outline-variant p-8 sm:p-12 rounded-sm shadow-sm">
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        
+        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-green block">
+          Creative Direction &amp; Co-Vision
+        </span>
+
+        <h2 class="font-display text-2xl sm:text-4xl font-bold text-primary leading-tight">
+          Crafted in Partnership with <span class="text-accent-green">tszuk</span>.
+        </h2>
+
+        <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed max-w-xl mx-auto">
+          Every sound, visual layout, and artistic detail on this platform represents a shared creative journey between Boss Reminisce and tszuk—building an authentic aesthetic from the ground up.
+        </p>
+
+        <div class="pt-4 flex items-center justify-center space-x-3 text-[11px] font-bold uppercase tracking-widest text-primary/60">
+          <span>Sound</span>
+          <span>•</span>
+          <span>Visuals</span>
+          <span>•</span>
+          <span>Identity</span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

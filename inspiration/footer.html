@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Reminisce | Footer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fbf6ed",
+            "surface-container": "#f1eae0",
+            "primary": "#1c1b1b",
+            "accent-green": "#3b4836",
+            "on-surface-variant": "#5a5a52",
+            "outline-variant": "#e6e2d6",
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'body': ['Hanken Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fbf6ed !important;
+      color: #1d1c15 !important;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .text-accent-green { color: #3b4836; }
+    .bg-surface-container { background-color: #f1eae0; }
+    .border-outline-variant { border-color: #e6e2d6; }
+  </style>
+</head>
+<body class="selection:bg-accent-green/20 selection:text-primary">
+
+  <!-- Section 10: Footer -->
+  <footer class="border-t border-outline-variant py-12 px-6 bg-surface-container">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      
+      <!-- Brand, Direct Email & Partnership Signature -->
+      <div class="space-y-1.5">
+        <p class="font-display text-xl font-bold text-primary">
+          Boss Reminisce
+        </p>
+        
+        <!-- Visible Direct Email -->
+        <a href="mailto:info@bossreminisce.com" class="inline-block text-xs font-semibold text-accent-green hover:underline tracking-wide">
+          info@bossreminisce.com
+        </a>
+
+        <p class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant pt-1">
+          © 2026 Boss Reminisce • In Partnership with <span class="text-accent-green font-bold">tszuk</span>
+        </p>
+      </div>
+
+      <!-- Specific Social Links (Instagram, Spotify, YouTube Only) -->
+      <div class="flex items-center space-x-6 text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-accent-green transition-colors">Instagram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-accent-green transition-colors">Spotify</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-accent-green transition-colors">YouTube</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

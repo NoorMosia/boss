@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Reminisce | Official Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fbf6ed",
+            "surface-container": "#f1eae0",
+            "surface-card": "#ffffff",
+            "on-surface": "#1d1c15",
+            "on-surface-variant": "#5a5a52",
+            "primary": "#1c1b1b",
+            "accent-green": "#3b4836",
+            "secondary": "#775a19",
+            "outline-variant": "#e6e2d6",
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'body': ['Hanken Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fbf6ed !important;
+      color: #1d1c15 !important;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .bg-accent-green { background-color: #3b4836; }
+    .text-accent-green { color: #3b4836; }
+    .border-accent-green { border-color: #3b4836; }
+    .bg-surface-card { background-color: #ffffff; }
+    .bg-surface-container { background-color: #f1eae0; }
+    .border-outline-variant { border-color: #e6e2d6; }
+  </style>
+</head>
+<body class="selection:bg-accent-green/20 selection:text-primary">
+
+  <!-- Section 5: Visual Archive ("101 Moments") -->
+  <section id="archive" class="py-20 px-6 max-w-6xl mx-auto border-t border-outline-variant">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent-green block mb-2">
+          Visual Vault
+        </span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-primary">
+          101 Moments
+        </h2>
+      </div>
+      <p class="text-xs text-on-surface-variant max-w-sm mt-4 md:mt-0 leading-relaxed">
+        Studio sessions, behind-the-lens stills, and editorial glimpses into the creative journey of Boss Reminisce.
+      </p>
+    </div>
+
+    <!-- Bento Grid Visual Gallery -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      
+      <!-- Photo 1: Primary Portrait (pe3.jpg) - Featured Large Card -->
+      <div class="sm:col-span-2 md:col-span-2 aspect-[16/10] bg-surface-container border border-outline-variant rounded-sm overflow-hidden relative group">
+        <img 
+          src="pe3.jpg" 
+          alt="Boss Reminisce Exhibition" 
+          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
+          <div>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-accent-green/90 bg-white/10 backdrop-blur-md px-2 py-0.5 rounded inline-block mb-1">
+              01 / Exhibition
+            </p>
+            <h3 class="font-display text-lg font-bold">Art & Frame Gallery Session</h3>
+          </div>
+          <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">center_focus_strong</span>
+        </div>
+      </div>
+
+      <!-- Photo 2: Studio / Mic Session -->
+      <div class="aspect-square bg-surface-container border border-outline-variant rounded-sm overflow-hidden relative group">
+        <img 
+          src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" 
+          alt="Studio Session" 
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-3 left-3 text-white">
+          <p class="text-[9px] font-bold uppercase tracking-widest text-white/80">02 / Late Night</p>
+          <p class="font-display text-sm font-bold">Vocal Booth Cuts</p>
+        </div>
+      </div>
+
+      <!-- Photo 3: Live Session / Stage Light -->
+      <div class="aspect-square bg-surface-container border border-outline-variant rounded-sm overflow-hidden relative group">
+        <img 
+          src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" 
+          alt="Live Performance" 
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-3 left-3 text-white">
+          <p class="text-[9px] font-bold uppercase tracking-widest text-white/80">03 / Stage</p>
+          <p class="font-display text-sm font-bold">Acoustic Set</p>
+        </div>
+      </div>
+
+      <!-- Photo 4: Writing / Notebook Stills -->
+      <div class="sm:col-span-2 md:col-span-2 aspect-[16/9] bg-surface-container border border-outline-variant rounded-sm overflow-hidden relative group">
+        <img 
+          src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80" 
+          alt="Penmanship & Production" 
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-4 left-4 text-white">
+          <p class="text-[9px] font-bold uppercase tracking-widest text-white/80">04 / Process</p>
+          <p class="font-display text-base font-bold">Lyrics & Keys</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Reminisce | Official Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background": "#fbf6ed",
+            "surface-container": "#f1eae0",
+            "surface-card": "#ffffff",
+            "on-surface": "#1d1c15",
+            "on-surface-variant": "#5a5a52",
+            "primary": "#1c1b1b",
+            "accent-green": "#3b4836", /* Sampled directly from BR signature logo */
+            "secondary": "#775a19",
+            "outline-variant": "#e6e2d6",
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'body': ['Hanken Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #fbf6ed; color: #1d1c15; }
+    .glass-nav { background: rgba(251, 246, 237, 0.9); backdrop-filter: blur(12px); }
+  </style>
+</head>
+<body class="font-body selection:bg-accent-green/20 selection:text-primary">
+
+  <!-- Section 1: Top Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/60">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      
+      <!-- Logo Image Link -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <img src="logo.png" alt="Boss Reminisce Monogram" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300" />
+      </a>
+      
+      <!-- Nav Links -->
+      <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant">
+        <a href="#discography" class="hover:text-accent-green transition-colors">Discography</a>
+        <a href="#dual-experience" class="hover:text-accent-green transition-colors">Sound</a>
+        <a href="#archive" class="hover:text-accent-green transition-colors">Archive</a>
+        <a href="#sessions" class="hover:text-accent-green transition-colors">Live Sessions</a>
+        <a href="#brand" class="hover:text-accent-green transition-colors">tszuk</a>
+      </div>
+
+      <!-- CTA -->
+      <a href="#contact" class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-5 py-2.5 hover:bg-accent-green transition-all shadow-sm">
+        Booking
+      </a>
+    </div>
+  </nav>
+
+  <!-- Section 2: Hero Section -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      
+      <!-- Text Content -->
+      <div class="md:col-span-7 space-y-6">
+        
+        <div class="inline-flex items-center space-x-2 bg-surface-container px-3.5 py-1.5 rounded-full border border-outline-variant">
+          <span class="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+          <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-green">
+            Singer / Songwriter / Lyricist
+          </span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-6xl font-bold text-primary leading-[1.1]">
+          Where Soulful Melody Meets Pure Lyricism.
+        </h1>
+
+        <p class="font-body text-base md:text-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Bridging smooth vocal hooks with razor-sharp rap cadence. Explore the discography, sift through the cards, and experience the lyrics.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="#discography" class="bg-accent-green text-white text-xs font-bold uppercase tracking-widest px-8 py-4 flex items-center space-x-3 hover:bg-primary transition-all shadow-md">
+            <span>Explore Discography</span>
+            <span class="material-symbols-outlined text-sm">arrow_downward</span>
+          </a>
+
+          <a href="#sessions" class="border border-accent-green/40 text-accent-green text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-surface-container transition-all">
+            Upcoming Sessions
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Portrait Image -->
+      <div class="md:col-span-5 relative">
+        <div class="aspect-[4/5] bg-surface-container border border-outline-variant rounded-sm shadow-2xl overflow-hidden relative group">
+          <img 
+            src="pe3.jpg" 
+            alt="Boss Reminisce" 
+            class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+          />
+          <!-- Subtle Overlay vignette -->
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Floating Accent Monogram Badge -->
+        <div class="absolute -bottom-6 -left-6 bg-surface-card border border-outline-variant p-3 hidden sm:block shadow-lg rounded-sm">
+          <img src="logo.png" alt="BR Signature" class="h-12 w-auto object-contain" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

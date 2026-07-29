@@ -1,0 +1,22 @@
+{
+  "sessions": [
+    {
+      "date": "2026-08-15",
+      "title": "Sunset Lounge Sessions",
+      "location": "Cape Town, SA",
+      "description": "An intimate evening of live acoustics."
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Rooftop Frequencies",
+      "location": "Johannesburg, SA",
+      "description": "Stripped-back melodies under city lights."
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Harbour Sound",
+      "location": "Port Elizabeth, SA",
+      "description": "Where the ocean meets the rhythm."
+    }
+  ]
+}

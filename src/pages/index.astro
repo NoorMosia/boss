@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Discography from '../components/Discography.astro';
+import VisualArchive from '../components/VisualArchive.astro';
+import Sessions from '../components/Sessions.astro';
+import Bio from '../components/Bio.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/global.css';
+import '../styles/layout.css';
+import '../styles/components.css';
+---
+
+<Base>
+  <Nav />
+  <main>
+    <Hero />
+    <Discography />
+    <VisualArchive />
+    <Sessions />
+    <Bio />
+  </main>
+  <Footer />
+
+  <script src="../scripts/smooth-scroll.js"></script>
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/card-deck.js"></script>
+  <script src="../scripts/audio-player.js"></script>
+  <script src="../scripts/video-autoplay.js"></script>
+</Base>

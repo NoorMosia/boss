@@ -1,0 +1,19 @@
+{
+  "name": "boss-reminisce",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "5.8.1",
+    "gsap": "3.12.7",
+    "lenis": "1.2.3"
+  },
+  "optionalDependencies": {
+    "@esbuild/win32-x64": "^0.28.1"
+  }
+}

@@ -1,0 +1,53 @@
+/* === Container === */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-xl);
+  }
+}
+
+/* === Section Spacing === */
+.section {
+  padding-top: var(--space-lg);
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: var(--space-xl);
+    padding-bottom: 3rem;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+/* Hero keeps its own spacing — override */
+.hero {
+  margin-bottom: 0;
+}
+
+/* === Page Wrapper === */
+.page-wrapper {
+  opacity: 0;
+  min-height: 100vh;
+}
+
+.page-wrapper.is-ready {
+  opacity: 1;
+}
+
+/* === Main Content === */
+main {
+  padding-top: var(--nav-height);
+}

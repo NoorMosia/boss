@@ -1,0 +1,82 @@
+---
+import p1 from '../../assets/artist/visuals/p1.jpg';
+import p3 from '../../assets/artist/visuals/p3.jpg';
+import pe1 from '../../assets/artist/visuals/pe1.jpg';
+import pe2 from '../../assets/artist/visuals/pe2.jpg';
+import pe4 from '../../assets/artist/visuals/pe4.jpg';
+import cover4 from '../../assets/artist/visuals/albumCover4.jpg';
+---
+
+<section id="archive" class="section container">
+  <h2 class="section-heading">Archive</h2>
+
+  <!-- Desktop: bento grid -->
+  <div class="archive-grid">
+    <div class="archive-item archive-item--tall">
+      <img src={p1.src} alt="Boss Reminisce performing live" width="800" height="1000" loading="lazy" />
+    </div>
+    <div class="archive-item">
+      <img src={pe1.src} alt="Boss Reminisce studio session" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-item">
+      <img src={pe2.src} alt="Boss Reminisce portrait" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-item archive-item--wide">
+      <video
+        data-video
+        muted
+        playsinline
+        loop
+        preload="none"
+        poster={pe4.src}
+        aria-label="Boss Reminisce live performance video"
+      >
+        <source src="/performance.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="archive-item">
+      <img src={p3.src} alt="Boss Reminisce behind the scenes" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-item">
+      <img src={pe4.src} alt="Boss Reminisce on stage" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-item">
+      <img src={cover4.src} alt="Boss Reminisce album artwork" width="600" height="600" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Mobile: staggered offset layout -->
+  <div class="archive-stagger">
+    <div class="archive-stagger-item archive-stagger-left">
+      <img src={p1.src} alt="Boss Reminisce performing live" width="800" height="1000" loading="lazy" />
+    </div>
+    <div class="archive-stagger-item archive-stagger-right">
+      <img src={pe1.src} alt="Boss Reminisce studio session" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-stagger-item archive-stagger-left">
+      <img src={pe2.src} alt="Boss Reminisce portrait" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-stagger-item archive-stagger-right">
+      <video
+        data-video
+        muted
+        playsinline
+        loop
+        preload="none"
+        poster={pe4.src}
+        aria-label="Boss Reminisce live performance video"
+      >
+        <source src="/performance.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="archive-stagger-item archive-stagger-left">
+      <img src={p3.src} alt="Boss Reminisce behind the scenes" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-stagger-item archive-stagger-right">
+      <img src={pe4.src} alt="Boss Reminisce on stage" width="600" height="450" loading="lazy" />
+    </div>
+    <div class="archive-stagger-item archive-stagger-left">
+      <img src={cover4.src} alt="Boss Reminisce album artwork" width="600" height="600" loading="lazy" />
+    </div>
+  </div>
+</section>

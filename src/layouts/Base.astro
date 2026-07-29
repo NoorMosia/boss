@@ -1,0 +1,59 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Boss Reminisce — Melody meets lyricism',
+  description = 'The official home of Boss Reminisce. Soulful melody, pure lyricism, rooted in South African sound.'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="music.musician" />
+  <meta property="og:title" content="Boss Reminisce" />
+  <meta property="og:description" content="Melody meets lyricism." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://bossreminisce.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Boss Reminisce" />
+  <meta name="twitter:description" content="Melody meets lyricism." />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Boss Reminisce",
+    "description": "Soulful melody meets pure lyricism.",
+    "genre": ["Soul", "Acoustic", "Hip-Hop"],
+    "url": "https://bossreminisce.com"
+  })} />
+
+  <!-- Styles -->
+  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-wrapper" id="page-wrapper">
+    <slot />
+  </div>
+</body>
+</html>
